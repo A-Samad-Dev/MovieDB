@@ -28,7 +28,11 @@ const MovieProvider = ({ children }) => {
 
   const popularMovies = [...allMovies]
   popularMovies.sort((a, b) => a.popularity - b.popularity).splice(0, 10);
-  const [showcaseMovie, setshowcaseMovie] = useState(popularMovies[0])  
+  const [showcaseMovie, setshowcaseMovie] = useState(popularMovies[9])  
+
+  const trendingMovies=[...allMovies]
+  trendingMovies.sort((a,b)=>a.vote_count -b.vote_count).splice(0,10);
+  
 
 
   return (
@@ -39,7 +43,9 @@ const MovieProvider = ({ children }) => {
         displaytext,
         setdisplaytext,
         popularMovies,
-        showcaseMovie
+        showcaseMovie, 
+        trendingMovies,
+        setshowcaseMovie
       }}
     >
       {children}

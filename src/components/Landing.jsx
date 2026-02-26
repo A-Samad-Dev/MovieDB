@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import { Outlet } from "react-router";
 import Display from "../Display";
 import { MovieContext } from "../MovieContext";
+import Trending from "./Trending";
 
 const Landing = () => {
   // const { allMovies, loading, popularMovies } = useContext(MovieContext);
@@ -11,7 +12,7 @@ const Landing = () => {
   //   (max, movie) => (movie.popularity > max.popularity ? movie : max),
   //   allMovies[0],
   // );
-  
+
   // const [bgImage, setbgImage] = useState(null)
 
   // if (loading || allMovies.length === 0) {
@@ -29,11 +30,12 @@ const Landing = () => {
   //   }
 
   return (
-    <div className=""> 
+    <div className="">
       <div className="relative  ">
         <div className="relative-4">
           <Navbar />
           <Display />
+          <Trending />
           <Outlet />
         </div>
       </div>
