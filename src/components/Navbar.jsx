@@ -33,11 +33,11 @@ const Navbar = () => {
             </div>
           </NavLink>
         </ul>
-        <ul className="hidden md:inline-flex gap-x-3 items-center">
+        <ul className="hidden md:inline-flex gap-x-19 justify-between items-center">
           <NavLink
             to={"#"}
             className={({ isActive }) =>
-              isActive ? "text-white font-black" : "text-black"
+              isActive ? "text-white font-black" : "text-red-500"
             }
           >
             New Releases
@@ -45,7 +45,7 @@ const Navbar = () => {
           <NavLink
             to={"#"}
             className={({ isActive }) =>
-              isActive ? "text-white font-black" : "text-black"
+              isActive ? "text-white font-black" : "text-red-500"
             }
           >
             Popular
@@ -53,7 +53,7 @@ const Navbar = () => {
           <NavLink
             to={"#"}
             className={({ isActive }) =>
-              isActive ? "text-white font-black" : "text-black"
+              isActive ? "text-white font-black" : "text-red-500"
             }
           >
             Genres
@@ -61,7 +61,7 @@ const Navbar = () => {
           <NavLink
             to={"#"}
             className={({ isActive }) =>
-              isActive ? "text-red-500 font-black" : "text-black"
+              isActive ? "text-red-500 font-black" : "text-red-500"
             }
           >
             {" "}
@@ -78,7 +78,6 @@ const Navbar = () => {
         </button>
       </div>
       {open && (
-        
         <div className="md:hidden mt-3 bg-white shadow-lg rounded p-4 overflow-hidden">
           <ul className="flex flex-col gap-y-3 text-black">
             <NavLink
